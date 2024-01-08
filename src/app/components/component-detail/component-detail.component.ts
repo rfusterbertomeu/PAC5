@@ -17,7 +17,7 @@ export class ComponentDetailComponent {
     height: 0,
     order: 0,
     weight: 0,
-    type: '',
+    type: [''],
     url: '',
   };
   panelState: boolean;

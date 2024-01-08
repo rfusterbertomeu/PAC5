@@ -8,7 +8,7 @@
         <mat-card-header>
           <mat-card-title-group>
             <mat-card-title>
-              <strong> {{pokemon.name | titlecase }}</strong>
+              {{pokemon.id}} - <strong> {{pokemon.name | titlecase }}</strong>
             </mat-card-title><img mat-card-md-image src="{{pokemon.url}}" alt="Photo de {{pokemon.name}}">
           </mat-card-title-group>
         </mat-card-header>
@@ -23,8 +23,8 @@
               <p><strong>Ordre:</strong> {{pokemon.order}}</p>
               <p><strong>Tipus:</strong> {{pokemon.type}}</p>
               <p><strong>Experiència bàsica:</strong> {{pokemon.base_experience}}</p>
-              <p><strong>Altura:</strong> {{pokemon.height}}</p>
-              <p><strong>Pes:</strong> {{pokemon.weight}}</p>
+              <p><strong>Altura:</strong> {{pokemon.height / 10}} m</p>
+              <p><strong>Pes:</strong> {{pokemon.weight / 10}} kg</p>
             </mat-expansion-panel>
           </mat-accordion>
         </mat-card-content>

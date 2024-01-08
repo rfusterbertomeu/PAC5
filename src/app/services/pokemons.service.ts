@@ -26,7 +26,7 @@ export class PokemonsService {
               height: 0,
               order: 0,
               weight: 0,
-              type: '',
+              type: [''],
               url: '',
             };
           });
@@ -39,6 +39,12 @@ export class PokemonsService {
       .get<Pokemon>('https://pokeapi.co/api/v2/pokemon/' + id)
       .pipe(
         map((pokemon: any) => {
+          let types: string[] = [];
+          pokemon.types.forEach((res: any) => {
+            let t: string = res.type.name;
+            types.push(t);
+          });
+
           return {
             id: pokemon.id,
             name: pokemon.name,
@@ -46,7 +52,7 @@ export class PokemonsService {
             height: pokemon.height,
             order: pokemon.order,
             weight: pokemon.weight,
-            type: pokemon.name,
+            type: types,
             url: pokemon.sprites.other.dream_world.front_default,
           };
         })

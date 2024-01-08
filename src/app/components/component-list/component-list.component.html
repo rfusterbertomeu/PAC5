@@ -1,0 +1,30 @@
+<div class="container">
+  <section>
+    <h1>HOME</h1>
+  </section>
+  <section class="contenidor contenidor-buttons">
+    <mat-button-toggle-group [formControl]="viewType">
+
+      <mat-button-toggle value="table" aria-label="View type table">
+        <mat-icon>grid_view</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="card" aria-label="View type card">
+        <mat-icon>view_list</mat-icon>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </section>
+  <section class="contenidor contenidor-spinner">
+    <app-spinner [loading]="loading"></app-spinner>
+  </section>
+  <section>
+    <div *ngIf="viewType.value == 'table'" class="animate__animated animate__bounce animate__fadeInUp">
+      <app-grid [items]="pokemons"></app-grid>
+    </div>
+    <div *ngIf="viewType.value == 'card'" class="animate__animated animate__bounce animate__fadeInUp">
+      <div class="my-2" *ngFor="let pokemon of pokemons">
+        <app-card [item]="pokemon"></app-card>
+      </div>
+    </div>
+  </section>
+
+</div>

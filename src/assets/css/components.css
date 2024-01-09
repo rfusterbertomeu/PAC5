@@ -2,10 +2,12 @@ section,
 mat-card-title-group {
   padding-block: 0.5rem;
 }
+
 .contenidor {
   display: flex;
   align-items: center;
 }
+
 .contenidor-buttons {
   justify-content: right;
 }
@@ -25,15 +27,12 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #001730; /* Cambia el color al pasar el mouse (un tono más oscuro) */
-  text-decoration: underline; /* Subrayado al pasar el mouse */
+.item-list {
+  border: solid 2px #F0F0F0;
 }
 
-.item-list {
-  background: rgb(230, 233, 235);
+.item-list:hover {
+  background: #F0F0F0;
 }
 
 img {

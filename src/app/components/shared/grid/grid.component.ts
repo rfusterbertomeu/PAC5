@@ -7,8 +7,7 @@ import { Pokemon } from 'src/app/models/pokemon.interface';
   styleUrls: ['./grid.component.css'],
 })
 export class GridComponent {
-  @Input() items: Pokemon[] = [
-    {
+  @Input() items: Pokemon[] = [{
       id: 0,
       name: '',
       base_experience: 0,
@@ -20,7 +19,6 @@ export class GridComponent {
       hidden_ability:[''],
       url_imatge: '',
       url_icon: ''
-    },
-  ];
+    }];
   ngOnInit(): void {}
 }

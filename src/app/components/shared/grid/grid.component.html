@@ -1,5 +1,7 @@
 <mat-grid-list cols="3" rowHeight="2:1">
-  <mat-grid-tile *ngFor="let item of items" class="item-list"> <a [routerLink]="['/pokemon',item.id]">{{item.name |
-      titlecase }}</a>
-  </mat-grid-tile>
+  <a *ngFor="let item of items" [routerLink]="['/pokemon',item.id]">
+    <mat-grid-tile class="item-list">
+      {{item.name |
+      titlecase }}
+    </mat-grid-tile> </a>
 </mat-grid-list>

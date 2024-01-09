@@ -22,10 +22,9 @@
       <app-grid [items]="pokemons"></app-grid>
     </div>
     <div *ngIf="viewType.value == 'card'" class="animate__animated animate__bounce animate__fadeInUp">
-      <div class="my-2" *ngFor="let pokemon of pokemons">
+      <a class="my-2" *ngFor="let pokemon of pokemons" [routerLink]="['/pokemon',pokemon.id]">
         <app-card [item]="pokemon"></app-card>
-      </div>
+      </a>
     </div>
   </section>
-
 </div>

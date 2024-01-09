@@ -18,7 +18,10 @@ export class ComponentDetailComponent {
     order: 0,
     weight: 0,
     type: [''],
-    url: '',
+    ability:[''],
+    hidden_ability:[''],
+    url_imatge: '',
+    url_icon: ''
   };
   panelState: boolean;
   constructor(

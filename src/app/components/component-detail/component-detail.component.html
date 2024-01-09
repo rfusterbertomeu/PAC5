@@ -3,13 +3,13 @@
     <app-spinner [loading]="loading"></app-spinner>
   </section>
   <div class="row animate__animated animate__bounce animate__fadeIn">
-    <div class="col-md-9">
+    <div class="col-md-9 pb-3">
       <mat-card>
         <mat-card-header>
           <mat-card-title-group>
             <mat-card-title>
               {{pokemon.id}} - <strong> {{pokemon.name | titlecase }}</strong>
-            </mat-card-title><img mat-card-md-image src="{{pokemon.url}}" alt="Photo de {{pokemon.name}}">
+            </mat-card-title><img mat-card-md-image src="{{pokemon.url_icon}}" alt="Icona de {{pokemon.name}}">
           </mat-card-title-group>
         </mat-card-header>
         <mat-card-content>
@@ -20,11 +20,19 @@
                   Característiques de {{pokemon.name | titlecase }}
                 </mat-panel-title>
               </mat-expansion-panel-header>
-              <p><strong>Ordre:</strong> {{pokemon.order}}</p>
-              <p><strong>Tipus:</strong> {{pokemon.type}}</p>
-              <p><strong>Experiència bàsica:</strong> {{pokemon.base_experience}}</p>
-              <p><strong>Altura:</strong> {{pokemon.height / 10}} m</p>
-              <p><strong>Pes:</strong> {{pokemon.weight / 10}} kg</p>
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <p><strong>Tipus:</strong> {{pokemon.type}}</p>
+                  <p><strong>Experiència bàsica:</strong> {{pokemon.base_experience}}</p>
+                  <p><strong>Altura:</strong> {{pokemon.height / 10}} m</p>
+                  <p><strong>Pes:</strong> {{pokemon.weight / 10}} kg</p>
+                  <p><strong>Habilitat:</strong> {{pokemon.ability}}</p>
+                  <p><strong>Hab. oculta:</strong> {{pokemon.hidden_ability}}</p>
+                </div>
+                <div>
+                  <img mat-card-lg-image src="{{pokemon.url_imatge}}" alt="Foto de {{pokemon.name}}">
+                </div>
+              </div>
             </mat-expansion-panel>
           </mat-accordion>
         </mat-card-content>

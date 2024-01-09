@@ -27,7 +27,8 @@ export class PokemonsService {
               order: 0,
               weight: 0,
               type: [''],
-              url: '',
+              url_imatge: '',
+              url_icon: '',
             };
           });
         })
@@ -40,11 +41,21 @@ export class PokemonsService {
       .pipe(
         map((pokemon: any) => {
           let types: string[] = [];
+          let abilities: string[] = [];
+          let h_abilities: string[] = [];
           pokemon.types.forEach((res: any) => {
             let t: string = res.type.name;
             types.push(t);
           });
-
+          pokemon.abilities.forEach((res: any) => {
+            let ability_name: string = res.ability.name;          
+            let isHidden: string = res.is_hidden;
+            if(isHidden){
+              h_abilities.push(ability_name);
+            } else {
+              abilities.push(ability_name);
+            }
+          });
           return {
             id: pokemon.id,
             name: pokemon.name,
@@ -53,7 +64,10 @@ export class PokemonsService {
             order: pokemon.order,
             weight: pokemon.weight,
             type: types,
-            url: pokemon.sprites.other.dream_world.front_default,
+            ability:abilities,
+            hidden_ability:h_abilities,
+            url_imatge: pokemon.sprites.other.dream_world.front_default,
+            url_icon: pokemon.sprites.front_default,
           };
         })
       );

@@ -6,5 +6,8 @@ export interface Pokemon {
   order: number;
   weight: number;
   type: string[];
-  url: string;
+  ability: string[];
+  hidden_ability: string[];
+  url_imatge: string;
+  url_icon: string;
 }

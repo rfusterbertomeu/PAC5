@@ -16,7 +16,10 @@ export class GridComponent {
       order: 0,
       weight: 0,
       type: [''],
-      url: '',
+      ability:[''],
+      hidden_ability:[''],
+      url_imatge: '',
+      url_icon: ''
     },
   ];
   ngOnInit(): void {}

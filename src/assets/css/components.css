@@ -20,7 +20,8 @@ h1 {
   text-align: center;
 }
 
-a {
+a,
+a:hover {
   font-size: 1.2rem;
   font-weight: bold;
   color: #001730;

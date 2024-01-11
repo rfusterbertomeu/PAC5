@@ -43,7 +43,7 @@
     {
       "name": "poke-api-photos",
       "urls": [
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/**"
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/**"
       ],
       "cacheConfig": {
         "maxSize": 10,

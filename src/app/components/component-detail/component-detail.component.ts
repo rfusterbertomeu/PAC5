@@ -18,10 +18,10 @@ export class ComponentDetailComponent {
     order: 0,
     weight: 0,
     type: [''],
-    ability:[''],
-    hidden_ability:[''],
+    ability: [''],
+    hidden_ability: [''],
     url_imatge: '',
-    url_icon: ''
+    url_icon: '',
   };
   panelState: boolean;
   constructor(
@@ -36,7 +36,6 @@ export class ComponentDetailComponent {
     const id = this.activatedRoute.snapshot.paramMap.get('id') || '';
 
     this.pokemonService.getPokemonById(id).subscribe((pokemon: any) => {
-      console.log(pokemon);
       if (!pokemon) {
         return this.router.navigateByUrl('/');
       }
